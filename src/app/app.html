@@ -1,0 +1,136 @@
+<header class="site-header">
+  <a class="brand" href="#fooldal" aria-label="GáBORokHáza főoldal">
+    <span class="brand-mark">GH</span>
+    <span>
+      <strong>GáBORokHáza</strong>
+      <small>szőlőből, szívvel</small>
+    </span>
+  </a>
+
+  <nav class="main-nav" aria-label="Fő navigáció">
+    <a href="#fooldal">Főoldal</a>
+    <a href="#rolunk">Rólunk</a>
+    <a href="#kepek">Képek</a>
+    <a href="#rendeles">Rendelés</a>
+  </nav>
+
+  <a class="cart-link" href="#rendeles" aria-label="Kosár megnyitása">
+    Kosár <span>{{ cartCount() }}</span>
+  </a>
+</header>
+
+<main>
+  <section class="hero" id="fooldal">
+    <div class="hero-copy">
+      <p class="eyebrow">Szőlőtől a pohárig · 2026</p>
+      <h1>Egy korty<br /><em>tiszta vidék.</em></h1>
+      <p class="hero-text">
+        Gondosan válogatott borok és szőlőből születő pillanatok a pincénkből, egyenesen az
+        asztalodra.
+      </p>
+      <a class="button button-dark" href="#kepek">Megnézem a borokat <span>↗</span></a>
+    </div>
+    <div class="hero-image">
+      <img
+        ngSrc="https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?auto=format&fit=crop&w=1200&q=85"
+        width="900"
+        height="1100"
+        priority
+        alt="Szőlősorok naplementében"
+      />
+      <span class="image-note">01 / 04<br />a dűlő története</span>
+    </div>
+  </section>
+
+  <section class="intro" id="rolunk">
+    <p class="eyebrow">Miért GáBORokHáza?</p>
+    <h2>Termőhely, türelem.<br />Bor, ami mesél.</h2>
+    <p>
+      A GáBORokHáza kis családi pincészetének borai a napsütötte dűlők, a gondos munka és a közös
+      esték történetét viszik tovább. Minden palackban ott van a hely, ahonnan érkezik.
+    </p>
+  </section>
+
+  <section class="collection" id="kepek">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Pincészetünk válogatása</p>
+        <h2>Válaszd ki a kedvenced</h2>
+      </div>
+      <span class="collection-count">01 — 04</span>
+    </div>
+    <div class="product-grid">
+      <article class="product-card">
+        <div class="product-image">
+          <img
+            ngSrc="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=700&q=85"
+            width="700"
+            height="850"
+            alt="Vörösboros palack pohárral"
+          />
+        </div>
+        <div class="product-info">
+          <h3>GáBORokHáza Bikavér</h3>
+          <p>2022 · Eger, vörös cuvée</p>
+          <strong>6 490 Ft</strong
+          ><button type="button" (click)="addToCart()">Kosárba teszem <span>+</span></button>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img
+            ngSrc="https://images.unsplash.com/photo-1566754439888-7839e893d4f8?auto=format&fit=crop&w=700&q=85"
+            width="700"
+            height="850"
+            alt="Fehérboros palack szőlővel"
+          />
+        </div>
+        <div class="product-info">
+          <h3>Hajnali Harmat</h3>
+          <p>2023 · száraz, illatos fehérbor</p>
+          <strong>5 890 Ft</strong
+          ><button type="button" (click)="addToCart()">Kosárba teszem <span>+</span></button>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img
+            ngSrc="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=700&q=85"
+            width="700"
+            height="850"
+            alt="Rozébor pohárban"
+          />
+        </div>
+        <div class="product-info">
+          <h3>Naplemente rozé</h3>
+          <p>2023 · friss, gyümölcsös rozé</p>
+          <strong>5 490 Ft</strong
+          ><button type="button" (click)="addToCart()">Kosárba teszem <span>+</span></button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="order-section" id="rendeles">
+    <div>
+      <p class="eyebrow">Rendelés</p>
+      <h2>Legyen bor az asztalodon.</h2>
+      <p class="order-summary">
+        Jelenleg <strong>{{ cartLabel() }}</strong> van benne. Add meg az adataidat, és gondosan
+        becsomagoljuk a választott palackokat.
+      </p>
+    </div>
+    <form class="order-form" (submit)="$event.preventDefault()">
+      <label for="name">Név</label>
+      <input id="name" name="name" type="text" placeholder="A neved" />
+      <label for="email">E-mail cím</label>
+      <input id="email" name="email" type="email" placeholder="te@pelda.hu" />
+      <button class="button button-light" type="submit">Rendelés elküldése <span>↗</span></button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 GáBORokHáza</span>
+  <span>A dűlőtől az asztalig.</span>
+</footer>
