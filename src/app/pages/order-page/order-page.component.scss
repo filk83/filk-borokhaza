@@ -1,0 +1,92 @@
+.order-section {
+  background: #39232a;
+  color: #fffaf3;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 7rem 12vw;
+}
+.eyebrow {
+  color: #d9c2a2;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+}
+.order-section h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 4.7rem);
+  line-height: 1.05;
+  margin: 0;
+  max-width: 28rem;
+}
+.order-summary {
+  color: #cbb8ac;
+  line-height: 1.7;
+  max-width: 23rem;
+}
+.order-summary strong {
+  color: #d9c2a2;
+}
+.order-form {
+  align-self: center;
+  display: grid;
+  gap: 0.65rem;
+}
+.order-form label {
+  color: #cbb8ac;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+.order-form input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #76565c;
+  color: #fff;
+  font:
+    1rem Georgia,
+    serif;
+  outline: 0;
+  padding: 0.8rem 0;
+}
+.order-form input:focus {
+  border-color: #d9c2a2;
+}
+.order-form input::placeholder {
+  color: #9a7d78;
+}
+.button {
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  font: 700 0.75rem inherit;
+  gap: 1.5rem;
+  justify-content: space-between;
+  letter-spacing: 0.08em;
+  padding: 1rem 1.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.button-light {
+  background: linear-gradient(135deg, #e8d1ad 0%, #d0ac7c 100%);
+  box-shadow: 0 14px 28px rgb(166 106 63 / 18%);
+  color: #39232a;
+  width: 100%;
+}
+.button-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 35px rgb(57 35 42 / 20%);
+}
+@media (max-width: 700px) {
+  .order-section {
+    grid-template-columns: 1fr;
+    padding: 5rem 8vw;
+    gap: 3rem;
+  }
+}
